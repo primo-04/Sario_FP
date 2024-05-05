@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #191815;
+    font-family: sans-serif;
+    outline: none;
+}
+
+p {
+    padding: 20px;
+    text-align: center;
+    color: #f8f7f4;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+    color: #f8f7f4;
+    font-size: 12px;
+}
+
+.container {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    background-color: #f8f7f4;
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow:5px 5px 12px rgba(255, 255, 255, 0.16);
+    display: grid;
+    grid-template-columns: repeat(4, 68px);
+}
+
+button.theme-toggler {
+    height: 20px;
+    width: 20px;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    position: relative;
+    margin-left: auto;
+    margin-bottom: 40px;
+    background-color: #282828;
+}
+
+input {
+    grid-column: span 4;
+    height: 70px;
+    width: 260px;
+    background-color: #f8f7f4;;
+    box-shadow: inset -5px -5px 12px #ffffff64,
+                inset 5px 5px 12px rgba(0, 0, 0, 0.22);
+    border: none;
+    border-radius: 30px;
+
+    color: #282828;
+    font-size: 50px;
+    text-align: end;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+button {
+    height: 48px;
+    width: 48px;
+    background-color: #f8f7f4;
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, .16);
+    border: none;
+    border-radius: 50%;
+    margin: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.1);
+    transition: .1s linear;
+}
+
+.operator-btn {
+    background-color: #111812;
+}
+
+.equal {
+    background-color: #130e09;
+}
+
+.clear-btn {
+    background-color: #051118;
+}
+
+.operator-btn:hover, .equal:hover, .clear-btn:hover {
+    opacity: .8;
+}
+
+.operator-btn, .equal, .clear-btn {
+    color: #f8f7f4;
+}
+
+/* dark mode */
+.dark-mode * {
+    background-color: #f8f7f4;
+}
+
+.dark-mode p, .dark-mode footer {
+    color: #191815;
+}
+
+.dark-mode .calculator {
+    background-color: #191815;
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, .6);
+}
+
+.dark-mode input {
+    background-color: #191815;
+    color: #eee;
+    box-shadow: inset -5px -5px 12px #0a090999,
+                inset 5px 5px 12px rgba(0, 0, 0, .16);
+}
+
+.dark-mode button {
+    background-color: #191815;
+    color: #eee;
+    box-shadow: -5px -5px 12px #333333c2,
+                5px 5px 12px rgba(0, 0, 0, .16);
+
+}
+
+.dark-mode .operator-btn {
+    background-color: #f7f2f2;
+}
+
+.dark-mode .equal {
+    background-color: #feeceb;
+}
+
+.dark-mode .clear-btn {
+    background-color: #f1faff;
+}
+
+.dark-mode .operator-btn:hover, .equal:hover, .clear-btn:hover {
+    opacity: .8;
+}
+
+.dark-mode .operator-btn, .dark-mode .equal, .dark-mode .clear-btn {
+    color: #191815;
+}
+
+.dark-mode button.theme-toggler {
+    background-color: #f8f7f4;
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, .16);
+}
+
+.container, .calculator, input, button {
+    transition: background-color 0.3s ease, color 0.1s ease;
+}
